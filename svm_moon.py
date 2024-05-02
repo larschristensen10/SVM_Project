@@ -52,5 +52,5 @@ accuracy_poly = accuracy_score(y_test, prediction_poly)
 accuracy_sig = accuracy_score(y_test, prediction_sig)
 
 # Results are exported
-accuracy = pd.DataFrame({'Kernel': ['Linear', 'RBF', 'Poly', 'Sigmoid'], 'Accuracy': [accuracy_linear, accuracy_rbf, accuracy_poly, accuracy_sig]})
-accuracy.to_csv('moon_predictions.csv', index=False)
+prediction_results = pd.DataFrame({'Linear': prediction_linear, 'RBF': prediction_rbf, 'Poly': prediction_poly})
+prediction_results.to_csv('moon_predictions.csv', index=False)
